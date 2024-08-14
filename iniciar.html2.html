@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: helvetica, sans-serif;
+            margin: 0;
+            background-color: #fbffc1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .login-container {
+            background-color: #ffe9e9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-box {
+            margin-bottom: 20px;
+            height: 40px;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .login-box.username::before {
+            content: 'Usuario';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .login-box.password::before {
+            content: 'Contraseña';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .login-box.active {
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .login-box.active::before {
+            color: #666;
+        }
+
+        .login-box::after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .submit-button {
+            background-color: #ffa600;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #ccffcf;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 10px;
+            color: #0667cf;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <div class="login-box username"></div>
+        <div class="login-box password"></div>
+        <button class="submit-button">Iniciar Sesión</button>
+        <a href="#" class="forgot-password">Olvidé mi contraseña</a>
+    </div>
+</body>
+</html>
